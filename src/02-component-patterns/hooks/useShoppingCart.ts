@@ -17,7 +17,7 @@ export const useShoppingCart = () => {
         const productInCart: ProductInCart = oldShoppingCart[product.id] || { ...product, count: 0 };
 
         // Quiero el valor máximo de los dos
-        if( Math.max( productInCart.count + count, 0) ) {
+        /* if( Math.max( productInCart.count + count, 0) ) {
             //productInCart.count += 20;
             productInCart.count += count;
             return {
@@ -30,10 +30,10 @@ export const useShoppingCart = () => {
         // Borrar el producto
         const { [product.id]: toDelete, ...rest } = oldShoppingCart;
         //return {...rest};
-        return rest;
+        return rest; */
 
         // Es totalmente correcto, el que no está comentado es opcional
-            /* if( count === 0 ) {
+        if( count === 0 ) {
             const { [product.id]: toDelete, ...rest } = oldShoppingCart;
             return rest;
             }
@@ -41,7 +41,7 @@ export const useShoppingCart = () => {
             return {
             ...oldShoppingCart,
             [ product.id ]: { ...product, count }
-            } */
+            }
         });
 
     }
