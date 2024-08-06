@@ -38,3 +38,16 @@ export interface ProductCardHOCProps {
     Image:   ( Props: ProductImageProps ) => JSX.Element,
     Buttons: ( Props: ProductButtonProps ) => JSX.Element
 }
+
+
+
+export interface onChangeArgs {
+    product: Product;
+    count: number
+}
+
+
+// 84. Estado del carrito de compras
+export interface ProductInCart extends Product {
+    count: number;
+}
